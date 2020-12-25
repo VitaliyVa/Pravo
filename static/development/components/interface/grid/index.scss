@@ -1,0 +1,131 @@
+main {
+    position: relative;
+}
+
+.unselectable {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently
+                                    not supported by any browser */
+  }
+
+.container {
+    padding: 0px 5%;
+    width: 100%;
+}
+.upper_text {
+    text-transform: uppercase;
+}
+.absolute_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.shadow_title {
+    position: absolute;
+    font-size: 120px;
+    padding: 0px 5%;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #f4f4f4;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+//  тут шрифти 400 ==================>
+.sub_title {
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    font-weight: 400;
+    
+   
+    &_2 {
+        font-size: 18px;
+    }
+  
+  
+    
+}
+
+//  тут шрифти 700 ==================>
+.standart_title {
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+  
+}
+//  тут шрифти 800 ==================>
+.bigger_title {
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+  
+   
+}
+
+.color {
+    &_red {
+        color: #ea1a28;
+    }
+    &_blue {
+        color: #103989;
+    }
+    &_black {
+        color: #231f20;
+    }
+    &_white {
+        color: #fff;
+    }
+    &_green {
+        color: #5dc311;
+    }
+}
+
+
+@media (max-width: 1560px) {
+    .preferens_number__block {
+        .bigger_title_8 {
+            font-size: 60px;
+        }
+    }
+}
+@media (max-width: 1320px) {
+    .bigger_title_3 {
+        font-size: 31px;
+    }
+}
+@media (max-width: 992px) {
+    .bigger_title_3 {
+        font-size: 24px;
+    }
+}
+@media (max-width: 490px) {
+    .standart_title_5 {
+        font-size: 18px;
+    }
+    .standart_title_3 {
+        font-size: 17px;
+    }
+    .bigger_title_8 {
+        font-size: 30px !important;
+    }
+     .standart_title_7 {
+        font-size: 40px;
+    }
+}
+@media (max-width: 435px) {
+    .bigger_title_1 {
+        font-size: 18px;
+    }
+}
+
+
