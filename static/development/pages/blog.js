@@ -12,8 +12,7 @@ import '../components/module/form_errors/index'
 // script pages
 import '../components/common_componentc/header/index'
 import '../components/common_componentc/footer/index'
-import '../components/common_componentc/contact_form/index'
 
-import '../components/pages/post/index'
+import '../components/pages/blog/index'
 
 

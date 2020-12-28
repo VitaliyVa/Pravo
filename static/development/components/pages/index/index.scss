@@ -79,46 +79,6 @@
 
 
 
-.anim_bottom {
-	animation-duration: 1s;
-	animation-name: dinamic_bottom;
-	animation-fill-mode: forwards;
-  }
-
-@keyframes dinamic_bottom {
-    0% {
-		bottom: -100px;
-		opacity: 0;
-    }
-    50% {
-		opacity: 1;
-    }
-    100% {
-		bottom: 0;
-		opacity: 1;
-    }
-}
-
-
-.anim_top {
-	animation-duration: 1s;
-	animation-name: dinamic_top;
-	animation-fill-mode: forwards;
-  }
-
-@keyframes dinamic_top {
-    0% {
-		top: -100px;
-		opacity: 0;
-    }
-    50% {
-		opacity: 1;
-    }
-    100% {
-		top: 0;
-		opacity: 1;
-    }
-}
 
 
 @media (max-width: 1380px) {

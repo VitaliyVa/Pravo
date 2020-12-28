@@ -50,9 +50,7 @@ $(function () {
 
 // в цю функцію заганяються форми які мають проходити валідацію
 function Onload() {
-  valide_form('.form__block', '.input', true);
-  valide_form('.form_consultation', '.input', true);
-  valide_form('#form_calculator', '.inp-vak-wrap', true);
+  valide_form('.contact_form', '.input', true);
 }
 // вертає конкретну мову, яка стоїть зараз на сайті
 function location_leng() {
@@ -120,11 +118,11 @@ function valide_form(id_form, append_error_box, check_request) {
           // operator: true,
         },
 
-        email: {
+        mail: {
           required: true,
           email: true,
         },
-        message: {
+        name: {
           required: true,
         },
         phone: {
@@ -140,11 +138,11 @@ function valide_form(id_form, append_error_box, check_request) {
           // email: errore_text.email,
           // operator: array_error.curr_text,
         },
-        email: {
+        mail: {
           required: errore_text.required,
           email: errore_text.email
         },
-        message: {
+        name: {
           required: errore_text.required,
         },
 

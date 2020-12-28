@@ -81,38 +81,10 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./post.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./blog.js");
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "../components/common_componentc/contact_form/index.js":
-/*!*************************************************************!*\
-  !*** ../components/common_componentc/contact_form/index.js ***!
-  \*************************************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.scss */ "../components/common_componentc/contact_form/index.scss");
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_0__);
-
-
-/***/ }),
-
-/***/ "../components/common_componentc/contact_form/index.scss":
-/*!***************************************************************!*\
-  !*** ../components/common_componentc/contact_form/index.scss ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-    if(false) { var cssReload; }
-  
-
-/***/ }),
 
 /***/ "../components/common_componentc/footer/index.js":
 /*!*******************************************************!*\
@@ -1031,24 +1003,27 @@ function valide_form(id_form, append_error_box, check_request) {
 
 /***/ }),
 
-/***/ "../components/pages/post/index.js":
+/***/ "../components/pages/blog/index.js":
 /*!*****************************************!*\
-  !*** ../components/pages/post/index.js ***!
+  !*** ../components/pages/blog/index.js ***!
   \*****************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.scss */ "../components/pages/post/index.scss");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.scss */ "../components/pages/blog/index.scss");
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _module_animation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../module/animation */ "../components/module/animation/index.js");
 
+
+Object(_module_animation__WEBPACK_IMPORTED_MODULE_1__["default"])('.blog_profile', 'anim_bottom', 100);
 
 /***/ }),
 
-/***/ "../components/pages/post/index.scss":
+/***/ "../components/pages/blog/index.scss":
 /*!*******************************************!*\
-  !*** ../components/pages/post/index.scss ***!
+  !*** ../components/pages/blog/index.scss ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1059,9 +1034,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./post.js":
+/***/ "./blog.js":
 /*!*****************!*\
-  !*** ./post.js ***!
+  !*** ./blog.js ***!
   \*****************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -1075,8 +1050,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_module_form_errors_index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/module/form_errors/index */ "../components/module/form_errors/index.js");
 /* harmony import */ var _components_common_componentc_header_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/common_componentc/header/index */ "../components/common_componentc/header/index.js");
 /* harmony import */ var _components_common_componentc_footer_index__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/common_componentc/footer/index */ "../components/common_componentc/footer/index.js");
-/* harmony import */ var _components_common_componentc_contact_form_index__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/common_componentc/contact_form/index */ "../components/common_componentc/contact_form/index.js");
-/* harmony import */ var _components_pages_post_index__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/pages/post/index */ "../components/pages/post/index.js");
+/* harmony import */ var _components_pages_blog_index__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/pages/blog/index */ "../components/pages/blog/index.js");
 // script interface
 
 
@@ -1085,7 +1059,6 @@ __webpack_require__.r(__webpack_exports__);
 
  // import '../components/common_componentc/admin_panel/index'
 // script pages
-
 
 
 

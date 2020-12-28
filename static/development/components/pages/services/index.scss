@@ -1,0 +1,145 @@
+.services_title {
+    position: relative;
+    width: 600px;
+    &__block {
+        position: relative;
+        background-color: #292527;
+        padding-top: 170px;
+        padding-bottom: 90px;
+
+        .container {
+            position: relative;
+            display: flex;
+        }
+    }
+    &_img {
+        position: absolute;
+        top: 0;
+        right: 5%;
+        width: 400px;
+        height: 400px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.services_content {
+    margin-bottom: 50px;
+
+    &_section {
+        position: relative;
+        padding: 50px 0;
+    }
+    &_title {
+        margin-bottom: 30px;
+    }
+    &__block {
+        display: flex;
+        justify-content: space-between;
+    }
+    &_profile {
+        width: 48%;
+
+        &.margin {
+            margin-top: 150px;
+        }
+        
+        &_dot {
+            position: relative;
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 10px;
+            background-color: #103989;
+        }
+        &_text {
+            display: flex;
+            margin-top: 15px;
+
+            span {
+                width: calc(100% - 20px);
+            }
+        }
+    }
+}
+
+.consultation_menu {
+    &_section {
+        position: relative;
+        padding: 60px 0;
+    }
+    &_bg {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.5;
+        }
+    }
+    &__block {
+        max-width: 500px;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &_title {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 1111px) {
+    .services_title_img {
+        display: none;
+    }
+    .services_title {
+        position: relative;
+        width: 100%;
+    }
+    .services_content_profile.margin {
+        margin-top: unset;
+    }
+    
+    
+}
+
+@media (max-width: 720px) {
+    .services_content_profile {
+        width: 100%;
+    }
+    .services_content__block {
+        flex-direction: column;
+    }
+    .services_title__block {
+        padding-top: 120px;
+        padding-bottom: 40px;
+    }
+    .services_content_section {
+        padding: 30px 0;
+    }
+    .services_content {
+        margin-bottom: 30px;
+    }
+    
+    
+    
+}
+
+@media (max-width: 360px) {
+    .services_title {
+        font-size: 19px;
+    }
+}

@@ -483,6 +483,10 @@ main {
   font-style: normal;
   letter-spacing: normal;
   font-weight: 400; }
+  .sub_title_0 {
+    font-size: 12px; }
+  .sub_title_1 {
+    font-size: 16px; }
   .sub_title_2 {
     font-size: 18px; }
 
@@ -490,6 +494,16 @@ main {
   font-weight: 700;
   font-stretch: normal;
   font-style: normal; }
+  .standart_title_0 {
+    font-size: 14px; }
+  .standart_title_2 {
+    font-size: 21px; }
+  .standart_title_2_1 {
+    font-size: 24px; }
+  .standart_title_3 {
+    font-size: 28px; }
+  .standart_title_4 {
+    font-size: 38px; }
 
 .bigger_title {
   font-weight: 800;
@@ -524,6 +538,8 @@ main {
     font-size: 24px; } }
 
 @media (max-width: 490px) {
+  .standart_title_4 {
+    font-size: 21px; }
   .standart_title_5 {
     font-size: 18px; }
   .standart_title_3 {
@@ -535,6 +551,8 @@ main {
 
 @media (max-width: 435px) {
   .bigger_title_1 {
+    font-size: 18px; }
+  .standart_title_2_1 {
     font-size: 18px; } }
 
 .bread_crumbs_section {
@@ -785,20 +803,6 @@ main {
     border: 1px solid #434343;
     border-radius: 4px;
     color: #fff; }
-    .input-black .input-field:-webkit-autofill {
-      -webkit-box-shadow: inset 0 0 0 50px #2B2B2B !important;
-      /* Цвет фона */
-      -webkit-text-fill-color: #fff !important;
-      /* цвет текста */
-      color: #fff !important;
-      /* цвет текста */ }
-    .input-black .input-field:-webkit-autofill:focus {
-      -webkit-box-shadow: inset 0 0 0 50px #2B2B2B !important;
-      /* Цвет фона */
-      -webkit-text-fill-color: #fff !important;
-      /* цвет текста */
-      color: #fff !important;
-      /* цвет текста */ }
   .input-white .input_label {
     color: #fff; }
   .input-white .input-field {
@@ -1387,6 +1391,21 @@ label.error {
         .header_navbar_li.active a {
           color: #ea1a28; }
 
+.anim_bottom {
+  animation-duration: 1s;
+  animation-name: dinamic_bottom;
+  animation-fill-mode: forwards; }
+
+@keyframes dinamic_bottom {
+  0% {
+    bottom: -100px;
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    bottom: 0;
+    opacity: 1; } }
+
 .anim_top {
   animation-duration: 1s;
   animation-name: dinamic_top;
@@ -1561,36 +1580,6 @@ label.error {
     width: 100%;
     height: 100%;
     object-fit: cover; }
-
-.anim_bottom {
-  animation-duration: 1s;
-  animation-name: dinamic_bottom;
-  animation-fill-mode: forwards; }
-
-@keyframes dinamic_bottom {
-  0% {
-    bottom: -100px;
-    opacity: 0; }
-  50% {
-    opacity: 1; }
-  100% {
-    bottom: 0;
-    opacity: 1; } }
-
-.anim_top {
-  animation-duration: 1s;
-  animation-name: dinamic_top;
-  animation-fill-mode: forwards; }
-
-@keyframes dinamic_top {
-  0% {
-    top: -100px;
-    opacity: 0; }
-  50% {
-    opacity: 1; }
-  100% {
-    top: 0;
-    opacity: 1; } }
 
 @media (max-width: 1380px) {
   .main_content_profile {

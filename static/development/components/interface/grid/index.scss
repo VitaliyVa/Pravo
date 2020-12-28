@@ -47,7 +47,12 @@ main {
     letter-spacing: normal;
     font-weight: 400;
     
-   
+    &_0 {
+        font-size: 12px;
+    }
+    &_1 {
+        font-size: 16px;
+    }
     &_2 {
         font-size: 18px;
     }
@@ -61,6 +66,22 @@ main {
     font-weight: 700;
     font-stretch: normal;
     font-style: normal;
+  
+    &_0 {
+        font-size: 14px;
+    }
+    &_2 {
+        font-size: 21px;
+    }
+    &_2_1 {
+        font-size: 24px;
+    }
+    &_3 {
+        font-size: 28px;
+    }
+    &_4 {
+        font-size: 38px;
+    }
   
 }
 //  тут шрифти 800 ==================>
@@ -109,6 +130,9 @@ main {
     }
 }
 @media (max-width: 490px) {
+    .standart_title_4 {
+        font-size: 21px;
+    }
     .standart_title_5 {
         font-size: 18px;
     }
@@ -126,6 +150,10 @@ main {
     .bigger_title_1 {
         font-size: 18px;
     }
+    .standart_title_2_1 {
+        font-size: 18px;
+    }
+    
 }
 
 

@@ -125,6 +125,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.scss */ "../components/common_componentc/header/index.scss");
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _module_animation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../module/animation */ "../components/module/animation/index.js");
+
 
 $('.btn_consultation').on('click', function () {
   $.fancybox.open({
@@ -137,43 +139,7 @@ $('.header_menu').on('click', function () {
   $(this).toggleClass('active');
   $(this).parents('.header__block').toggleClass('active');
 });
-return_anim_item('.header_navbar_li', 'anim_top', 100);
-
-function return_anim_item(item, className, delay) {
-  var custom_delay = delay;
-  var all_target = $(item);
-  $(all_target).css('position', 'relative');
-  $(all_target).css('opacity', '0');
-  $.each(all_target, function (index, litle_value) {
-    custom_delay += delay;
-    set_scroll(litle_value, function (value) {
-      setTimeout(function () {
-        $(value).addClass(className);
-        $('.main_bg').addClass('main_bg_active');
-      }, custom_delay);
-    });
-  });
-}
-
-function set_scroll(container, action) {
-  var target_block = $(container);
-  var blockStatus = true;
-  $(window).scroll(function () {
-    for_eacher(target_block);
-  });
-  for_eacher(target_block);
-
-  function for_eacher(block) {
-    $.each(block, function (index, value) {
-      var scrollEvent = $(window).scrollTop() >= $(value).position().top - $(window).height();
-
-      if (scrollEvent && blockStatus) {
-        blockStatus = false;
-        action(value);
-      }
-    });
-  }
-}
+Object(_module_animation__WEBPACK_IMPORTED_MODULE_1__["default"])('.header_navbar_li', 'anim_top', 100);
 
 /***/ }),
 
@@ -728,6 +694,54 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "../components/module/animation/index.js":
+/*!***********************************************!*\
+  !*** ../components/module/animation/index.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return return_anim_item; });
+function return_anim_item(item, className, delay) {
+  var custom_delay = delay;
+  var all_target = $(item);
+  $(all_target).css('position', 'relative');
+  $(all_target).css('opacity', '0');
+  $.each(all_target, function (index, litle_value) {
+    custom_delay += delay;
+    set_scroll(litle_value, function (value) {
+      setTimeout(function () {
+        $(value).addClass(className);
+        $('.main_bg').addClass('main_bg_active');
+      }, custom_delay);
+    });
+  });
+}
+
+function set_scroll(container, action) {
+  var target_block = $(container);
+  var blockStatus = true;
+  $(window).scroll(function () {
+    for_eacher(target_block);
+  });
+  for_eacher(target_block);
+
+  function for_eacher(block) {
+    $.each(block, function (index, value) {
+      var scrollEvent = $(window).scrollTop() >= $(value).position().top - $(window).height();
+
+      if (scrollEvent && blockStatus) {
+        blockStatus = false;
+        action(value);
+      }
+    });
+  }
+}
+
+/***/ }),
+
 /***/ "../components/module/form_errors/index.js":
 /*!*************************************************!*\
   !*** ../components/module/form_errors/index.js ***!
@@ -739,6 +753,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.scss */ "../components/module/form_errors/index.scss");
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_0__);
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 // підгружає стилі 
  // імортує валідацію для номерів оператора
 // import {check_operator} from '../mob_operator/index';
@@ -781,9 +797,7 @@ $(function () {
 }); // в цю функцію заганяються форми які мають проходити валідацію
 
 function Onload() {
-  valide_form('.form__block', '.input', true);
-  valide_form('.form_consultation', '.input', true);
-  valide_form('#form_calculator', '.inp-vak-wrap', true);
+  valide_form('.contact_form', '.input', true);
 } // вертає конкретну мову, яка стоїть зараз на сайті
 
 
@@ -796,6 +810,8 @@ function valide_form(id_form, append_error_box, check_request) {
   var check_request = check_request;
 
   if ($(id_form).length > 0) {
+    var _rules, _messages;
+
     var lang_site;
     var errore_text = {};
     lang_site = location_leng(); // перевіряє мову сайту, і вертає потрібний переклад
@@ -839,40 +855,36 @@ function valide_form(id_form, append_error_box, check_request) {
         $(validator).parents(append_error_box).append($(event));
         $(validator).parents(append_error_box).addClass('is-error');
       },
-      rules: {
+      rules: (_rules = {
         name: {
           required: true // integer: true,
           // operator: true,
 
         },
-        email: {
+        mail: {
           required: true,
           email: true
-        },
-        message: {
-          required: true
-        },
-        phone: {
-          required: true
         }
-      },
-      messages: {
+      }, _defineProperty(_rules, "name", {
+        required: true
+      }), _defineProperty(_rules, "phone", {
+        required: true
+      }), _rules),
+      messages: (_messages = {
         name: {
           required: errore_text.required // email: errore_text.email,
           // operator: array_error.curr_text,
 
         },
-        email: {
+        mail: {
           required: errore_text.required,
           email: errore_text.email
-        },
-        message: {
-          required: errore_text.required
-        },
-        phone: {
-          required: errore_text.required
         }
-      },
+      }, _defineProperty(_messages, "name", {
+        required: errore_text.required
+      }), _defineProperty(_messages, "phone", {
+        required: errore_text.required
+      }), _messages),
       submitHandler: function submitHandler(form) {
         event.preventDefault();
         $('.load_spin').addClass('load_spin_active');
