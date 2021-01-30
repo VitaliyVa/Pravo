@@ -1,57 +1,4 @@
-
-.bread_crumbs {
-  &_section {
-      position: relative;
-      height: 330px;
-      overflow: hidden;
-  }
-  &_bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0;
-      width: 100%;
-      height: 100%;
-      background: #121212;
-
-      img {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          opacity: 0.4;
-      }
-  }
-}
-.service {
-  &_navigation__block {
-      position: relative;
-      top: 0;
-      padding: 0px;
-      padding-top: 110px;
-      min-height: 220px;
-  }
-  &_navigation {
-      display: flex;
-      align-items: center;
-      svg {
-          transform: rotate(-90deg);
-          width: 17px;
-          height: 20px;
-      }
-      span {
-          padding-left: 10px;
-      }
-  }
-  &_title {
-      padding-top: 10px;
-  }
-}
-
-
-
   // modal
-  
   .true_form {
     position: absolute;
     z-index: 9999;
@@ -122,7 +69,7 @@
 .post_forms {
     width: 525px;
     padding: 45px 60px;
-    background-color: #2d2e28;
+    background-color: #ececec;
 
     input:-internal-autofill-selected {
         background-color: transparent !important;
@@ -144,7 +91,7 @@
         position: absolute;
           font-size: 13px;
         letter-spacing: normal;
-        color: #ffffff;
+        color: #231f20;
 
         padding: 5px;
     }
@@ -164,7 +111,7 @@
         font-style: normal;
         line-height: 2.13;
         letter-spacing: normal;
-        color: #ffffff !important;
+        color: #231f20 !important;
       
     }
     .inp-vak-wrap {
@@ -183,7 +130,7 @@
       transition: all .2s;
       bottom: 50px;
       font-size: 14px;
-      color: #fff;
+      color: #231f20;
     
     }
     .input_focus {
@@ -192,10 +139,10 @@
       outline: none;
       border: none;
       background-color: transparent;
-      border-bottom: 1px solid #fff !important;
+      border-bottom: 1px solid #231f20 !important;
     }
     .input_focus_active {
-        border-bottom: 2px solid #fff !important;
+        border-bottom: 2px solid #231f20 !important;
     }
     
     
@@ -211,7 +158,7 @@
     margin-top: 40px;
     display: block;
     border-radius: 5px;
-    background-color: #c3d72b;
+    background-color: #103989;
     font-size: 16px;
     font-weight: bold;
     font-stretch: normal;
@@ -229,16 +176,10 @@
       min-height: 260px;
     }
     
-    #modal-form_settings {
-    
-    }
-    .input_focuss {
-      background-color: #fff;
-      border-bottom: 2px solid #de4166 !important;
-    }
+   
     .cons_text {
         text-align: center;
-        color: #c3d72b;
+        color: #103989;
         line-height: 1;
         font-weight: 700;
         font-size: 15px;
@@ -254,45 +195,3 @@
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and ( max-height: 830px ) and ( min-width: 1520px ) {
-  .service_navigation__block {
-      position: relative;
-  }
-  .service_section {
-      justify-content: unset;
-  }
-}
-
-@media (max-width: 992px) {
-  .service_prof {
-      width: 100%;
-  }
-  .service_section {
-      overflow: auto;
-      height: unset;
-  }
-  .service_navigation__block {
-      position: relative;
-  }
-  .service_prof:after {
-      content: '';
-      display: none;
-  }
-}

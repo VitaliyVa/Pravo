@@ -25,6 +25,16 @@
                 border: solid 1px #0b5c79 !important;
                 background: #0b5c79;
             }
+            &_1 {
+                color: #fff;
+                border: solid 1px transparent !important;
+                background-color: #103989;
+                &:hover {
+                    border: solid 1px #0f3278 !important;
+                    background: #0f3278;
+                }
+                
+            }
         }
         &_red {
             color: #fff;

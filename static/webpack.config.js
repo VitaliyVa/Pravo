@@ -42,6 +42,8 @@ module.exports = {
         post: './post.js',
         blog: './blog.js',
         services: './services.js',
+        project: './project.js',
+        contacts: './contacts.js',
     },
     output: {
         filename: '[name]/index.js',

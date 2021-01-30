@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./static/source/lib/fancybox/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="./static/source/pages/contacts/index.css">
+
+</head>
+
+<body>
+  <div class="load_spin">
+    <img src="./static/source/img/712.svg" alt="">
+  </div>
+  <form method="POST" action="" class="true_form" id="modal-form_true" style="display:none;">
+    <img class="form_true_img" src="./static/source/img/png-123.png" alt="">
+    <svg class='error_form' color='red' aria-hidden="true" focusable="false" data-prefix="fas"
+      data-icon="exclamation-circle" class="svg-inline--fa fa-exclamation-circle fa-w-16" role="img"
+      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path fill="currentColor"
+        d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z">
+      </path>
+    </svg>
+    <div class="usually_modal_text">
+      Дякуємо, заявка опрацьована <br> Наші менеджери звяжуться з Вами
+    </div>
+  </form>
+
+  <header class="header">
+    <div class="container">
+      <div class="header__block">
+        <a href="#" class="header_logo__block">
+          <img src="./static/source/img/index/logo.png" alt="">
+        </a>
+        <ul class="header_navbar">
+          <li class="header_navbar_li">
+            <a class='sub_title sub_title_2 color_black' href="#">
+              Проєкти
+            </a>
+          </li>
+          <li class="header_navbar_li">
+            <a class='sub_title sub_title_2 color_black' href="#">
+              Про нас
+            </a>
+          </li>
+          <li class="header_navbar_li">
+            <a class='sub_title sub_title_2 color_black' href="#">
+              Наші клієнти
+            </a>
+          </li>
+          <li class="header_navbar_li">
+            <a class='sub_title sub_title_2 color_black' href="#">
+              Новини
+            </a>
+          </li>
+          <li class="header_navbar_li">
+            <a class='sub_title sub_title_2 color_black' href="#">
+              Контакти
+            </a>
+          </li>
+        </ul>
+        <div class="header_menu noActive hamburger">
+          <div class="top-bun"></div>
+          <div class="meat"></div>
+          <div class="bottom-bun"></div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </header>
+  <!-- /.header -->
+
+  <section class="contacts_map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2097.8065816191374!2d25.631705206055695!3d49.541688397192324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47303409ac6249d1%3A0xdd0302d60184a2a6!2z0YPQuy4g0J_RgNC-0YLQsNGB0LXQstC40YfQsCwgMSwg0KLQtdGA0L3QvtC_0L7Qu9GMLCDQotC10YDQvdC-0L_QvtC70YzRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNDYwMDA!5e0!3m2!1sru!2sua!4v1611956080590!5m2!1sru!2sua"
+      width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+      tabindex="0"></iframe>
+  </section>
+  <!-- /.contacts_map -->
+
+  <section class="contacts_section">
+    <div class="container">
+      <div class="contacts_title standart_title standart_title_4 color_black">
+        Контакти
+      </div>
+      <div class="contacts__block">
+        <form action="/test/" class="contacts_form__block">
+          <div class="contact_form_profile">
+            <div class="input input-white">
+              <label for="contact_name" class="label_input standart_title standart_title_0 color_black">
+                Ваше Ім’я
+              </label>
+              <div class="input_box">
+                <input class="input-field" placeholder="Андрій" type="text" id="contact_name" name="name">
+              </div>
+            </div>
+          </div>
+          <div class="contact_form_profile">
+            <div class="input input-white in-focus">
+              <label for="contact_phone" class="label_input standart_title standart_title_0 color_black">
+                Номер телефону
+              </label>
+              <div class="input_box">
+                <input class="input-field" placeholder="+380961111111" type="tel" id="contact_phone" name="phone">
+              </div>
+            </div>
+          </div>
+          <div class="contact_form_profile">
+            <div class="input input-white in-focus">
+              <label for="contact_mail" class="label_input standart_title standart_title_0 color_black">
+                Ваш e-mail
+              </label>
+              <div class="input_box">
+                <input class="input-field" placeholder="yourmail@mail.com" type="text" id="contact_mail" name="mail">
+              </div>
+            </div>
+          </div>
+          <div class="contact_form_profile">
+            <div class="input input-white in-focus">
+              <label for="contact_message" class="label_input standart_title standart_title_0 color_black">
+                Повідомлення
+              </label>
+              <div class="input_box">
+                <textarea placeholder="Ваше повідомлення тут…" name="message" id="contact_message"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="contact_form_profile">
+            <input type="submit" value="Надіслати" class="form_btn btn_standart btn_standart_blue_1">
+          </div>
+        </form>
+        <div class="contacts_info__block">
+          <div class="contacts_info__wrap">
+            <div class="contacts_info_prof">
+              <div class="contacts_info_svg">
+                <img src="./static/source/img/contacts/contacts-1.svg" alt="">
+              </div>
+              <div class="contacts_info_content">
+                <div class="contacts_info_title standart_title standart_title_0 color_black">
+                  Адреса
+                </div>
+                <a href="https://goo.gl/maps/7qukad5MLdNtMHgD6" target="_blank"
+                  class="contacts_info_name sub_title sub_title_0_1 color_black">
+                  м. Тернопіль, Протасевича 1, 12
+                </a>
+              </div>
+            </div>
+            <div class="contacts_info_prof">
+              <div class="contacts_info_svg">
+                <img src="./static/source/img/contacts/contacts-3.svg" alt="">
+              </div>
+              <div class="contacts_info_content">
+                <div class="contacts_info_title standart_title standart_title_0 color_black">
+                  Контактний номер телефону
+                </div>
+                <a href="tel:+380961234567" class="contacts_info_name sub_title sub_title_0_1 color_black">
+                  +3 80 (96) 123 45 67
+                </a>
+                <a href="tel:+380931234567" class="contacts_info_name sub_title sub_title_0_1 color_black">
+                  +3 80 (93) 123 45 67
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <div class="contacts_info__wrap">
+            <div class="contacts_info_prof">
+              <div class="contacts_info_svg">
+                <img src="./static/source/img/contacts/contacts-2.svg" alt="">
+              </div>
+              <div class="contacts_info_content">
+                <div class="contacts_info_title standart_title standart_title_0 color_black">
+                  Графік роботи
+                </div>
+                <div class="contacts_info_name sub_title sub_title_0_1 color_black">
+                  ПН-ПТ 9:00 - 17:00
+                </div>
+                <div class="contacts_info_name sub_title sub_title_0_1 color_black">
+                  Субота, Неділя — вихідний
+                </div>
+              </div>
+            </div>
+            <div class="contacts_info_prof">
+              <div class="contacts_info_svg">
+                <img src="./static/source/img/contacts/contacts-4.svg" alt="">
+              </div>
+              <div class="contacts_info_content">
+                <div class="contacts_info_title standart_title standart_title_0 color_black">
+                  Наш e-mail
+                </div>
+                <a href="mailto:info@pravanazemly.te.ua" class="contacts_info_name sub_title sub_title_0_1 color_black">
+                  info@pravanazemly.te.ua
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.contact_section -->
+  <form method="POST" action="/contact_form/" class="post_forms form_consultation modal_form" id="form_consultation"
+    style="display:none;">
+    <div class="all_title__block">
+      <div class="all_title cons_text">
+        Залиште заявку і наші менеджери звяжуться з вами.
+      </div>
+    </div>
+
+    <div class="inp-vak-wrap">
+      <label class="label__style" for="name">Ваше ім'я</label>
+      <input class="input_focus" name="name" type="text" required="">
+    </div>
+    <div class="inp-vak-wrap">
+      <label class="label__style" for="mail">Електронна пошта</label>
+      <input class="input_focus" name="mail" type="text" required="">
+    </div>
+    <div class="inp-vak-wrap">
+      <label class="label__style" for="phone">Ваш телефон</label>
+      <input name="phone" class="num_input input_focus mobile" type="text" required="">
+    </div>
+
+    <div class="error_block_false"></div>
+
+    <input type="submit" value='Відправити' class="submit_cons">
+  </form>
+
+  <script src="./static/source/lib/jquery/index.js"></script>
+  <script src="./static/source/lib/validation/validation.min.js"></script>
+  <script src="./static/source/lib/lazyload/lazyloadxt.extra.js"></script>
+  <script src="./static/source/lib/lazyload/jquery.lazyloadxt.srcset.min.js"></script>
+  <script src="./static/source/lib/maskinput/maskinput.js"></script>
+  <script src="./static/source/lib/fancybox/jquery.fancybox.min.js"></script>
+  <script src="./static/source/pages/contacts/index.js"></script>
+</body>
+
+</html>

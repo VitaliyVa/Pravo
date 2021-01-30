@@ -79,7 +79,9 @@
         із землеустрою
       </div>
       <div class="services_title_img">
-        <img src="./static/source/img/index/main-1.png" alt="">
+        <img class="main_content_img"
+          data-srcset="./static/source/img/index/main-1.png 1x, ./static/source/img/index/main-1@2x.png 2x" />
+        <!-- <img src="./static/source/img/index/main-1.png" alt=""> -->
       </div>
     </div>
   </div>
@@ -204,9 +206,9 @@
       <div class="consultation_menu_title standart_title standart_title_2_1 color_white">
         Потрібна допомога чи виникли питання про наші послуги?
       </div>
-      <a href="#" class="btn_standart btn_standart_green">
+      <div class="btn_consultation btn_standart btn_standart_green">
         Замовити консультацію
-      </a>
+      </div>
     </div>
   </section>
 
@@ -395,29 +397,36 @@
     <!-- /.container -->
   </section>
   <!-- /.contact_form_section -->
-
-  <form method="POST" action="/test/" class="form_consultation modal_form" id="form_consultation" style="display:none;">
+  <form method="POST" action="/contact_form/" class="post_forms form_consultation modal_form" id="form_consultation"
+    style="display:none;">
     <div class="all_title__block">
-      <div class="all_title main__title main__title_2 color_white">
+      <div class="all_title cons_text">
         Залиште заявку і наші менеджери звяжуться з вами.
       </div>
     </div>
-    <div class="input input-black">
-      <div class="input_box">
-        <input placeholder="Ім'я" class="input-field txtNumeric" type="text" id="contact_name" name="name">
-      </div>
-    </div>
-    <div class="input input-black in-focus">
-      <div class="input_box">
-        <input placeholder="Номер телефону" class="input-field valid" type="tel" id="contact_phone" name="phone">
-      </div>
-    </div>
-    <input type="submit" value="Надіслати" class="form_btn btn_standart btn_standart_red">
-  </form>
 
+    <div class="inp-vak-wrap">
+      <label class="label__style" for="name">Ваше ім'я</label>
+      <input class="input_focus" name="name" type="text" required="">
+    </div>
+    <div class="inp-vak-wrap">
+      <label class="label__style" for="mail">Електронна пошта</label>
+      <input class="input_focus" name="mail" type="text" required="">
+    </div>
+    <div class="inp-vak-wrap">
+      <label class="label__style" for="phone">Ваш телефон</label>
+      <input name="phone" class="num_input input_focus mobile" type="text" required="">
+    </div>
+
+    <div class="error_block_false"></div>
+
+    <input type="submit" value='Відправити' class="submit_cons">
+  </form>
 
   <script src="./static/source/lib/jquery/index.js"></script>
   <script src="./static/source/lib/validation/validation.min.js"></script>
+  <script src="./static/source/lib/lazyload/lazyloadxt.extra.js"></script>
+  <script src="./static/source/lib/lazyload/jquery.lazyloadxt.srcset.min.js"></script>
   <script src="./static/source/lib/maskinput/maskinput.js"></script>
   <script src="./static/source/lib/fancybox/jquery.fancybox.min.js"></script>
   <script src="./static/source/pages/services/index.js"></script>

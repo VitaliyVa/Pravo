@@ -16,6 +16,7 @@ export default function return_anim_item(item, className, delay) {
     });
 }
 
+
 function set_scroll(container, action) {
     let target_block = $(container);
     let blockStatus = true;
@@ -26,7 +27,7 @@ function set_scroll(container, action) {
 
     function for_eacher(block) {
         $.each(block, function (index, value) {
-            let scrollEvent = ($(window).scrollTop() >= ($(value).position().top - $(window).height()));
+            let scrollEvent = ($(window).scrollTop() >= ($(value).offset().top - $(window).height()));
 
             if (scrollEvent && blockStatus) {
                 blockStatus = false;
@@ -35,3 +36,4 @@ function set_scroll(container, action) {
         });
     }
 }
+

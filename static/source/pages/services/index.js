@@ -125,7 +125,10 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.scss */ "../components/common_componentc/footer/index.scss");
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _module_animation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../module/animation */ "../components/module/animation/index.js");
 
+
+Object(_module_animation__WEBPACK_IMPORTED_MODULE_1__["default"])('.footer_animation', 'anim_bottom', 30);
 
 /***/ }),
 
@@ -758,7 +761,7 @@ function set_scroll(container, action) {
 
   function for_eacher(block) {
     $.each(block, function (index, value) {
-      var scrollEvent = $(window).scrollTop() >= $(value).position().top - $(window).height();
+      var scrollEvent = $(window).scrollTop() >= $(value).offset().top - $(window).height();
 
       if (scrollEvent && blockStatus) {
         blockStatus = false;
@@ -826,6 +829,8 @@ $(function () {
 
 function Onload() {
   valide_form('.contact_form', '.input', true);
+  valide_form('.form_consultation', '.inp-vak-wrap', true);
+  valide_form('.contacts_form__block', '.input', true);
 } // вертає конкретну мову, яка стоїть зараз на сайті
 
 
@@ -897,6 +902,8 @@ function valide_form(id_form, append_error_box, check_request) {
         required: true
       }), _defineProperty(_rules, "phone", {
         required: true
+      }), _defineProperty(_rules, "message", {
+        required: true
       }), _rules),
       messages: (_messages = {
         name: {
@@ -911,6 +918,8 @@ function valide_form(id_form, append_error_box, check_request) {
       }, _defineProperty(_messages, "name", {
         required: errore_text.required
       }), _defineProperty(_messages, "phone", {
+        required: errore_text.required
+      }), _defineProperty(_messages, "message", {
         required: errore_text.required
       }), _messages),
       submitHandler: function submitHandler(form) {

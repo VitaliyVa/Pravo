@@ -51,6 +51,8 @@ $(function () {
 // в цю функцію заганяються форми які мають проходити валідацію
 function Onload() {
   valide_form('.contact_form', '.input', true);
+  valide_form('.form_consultation', '.inp-vak-wrap', true);
+  valide_form('.contacts_form__block', '.input', true);
 }
 // вертає конкретну мову, яка стоїть зараз на сайті
 function location_leng() {
@@ -128,6 +130,9 @@ function valide_form(id_form, append_error_box, check_request) {
         phone: {
           required: true,
         },
+        message: {
+          required: true,
+        },
 
       },
 
@@ -147,6 +152,10 @@ function valide_form(id_form, append_error_box, check_request) {
         },
 
         phone: {
+          required: errore_text.required,
+        },
+
+        message: {
           required: errore_text.required,
         },
 
